@@ -1,0 +1,50 @@
+h1 {
+    color: red;
+}
+
+p, li {
+    color: green;
+}
+
+li {
+    list-style-type: square;
+}
+
+.test {
+    color: aqua;
+    font-weight: bold;
+    width: 1500px;
+    border: aqua;
+}
+
+li.test, span.test {
+    color: orange;
+    font-weight: lighter;
+}
+
+li em {
+    color: rebeccapurple;
+}
+
+h1 + p {
+    font-size: 200%;
+}
+
+a:link {
+    background: red url(test.png) 10px 10px repeat-x fixed;
+}
+/* 주석 연습 */
+a:visited {
+    color: green;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body h1 + p .test {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
+
