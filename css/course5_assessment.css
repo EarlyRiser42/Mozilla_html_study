@@ -1,0 +1,86 @@
+/* General setup */
+
+* {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.1rem;
+}
+
+/* Layout */
+
+section {
+    float: left;
+    width: 50%;
+    text-indent: 2rem;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+}
+
+header, section, aside, nav, footer {
+    padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 2rem;
+}
+p{
+    font-size: 1.5rem;
+}
+
+a{
+    font-size: 1.5rem;
+
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:focus{
+    border-bottom: 1px solid;
+}
+a:hover{
+    border-bottom: 0px solid;
+}
+a:active {
+    color: red;
+}
+
+li{
+    font-size: 1.5rem;
+}
