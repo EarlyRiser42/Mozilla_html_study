@@ -32,7 +32,7 @@ class Ball extends Shape{
         super(x, y, velX, velY);
         this.color = color;
         this.size = size;
-        exists = True
+        this.exists = true;
     }
 
     draw() {
@@ -76,10 +76,54 @@ class Ball extends Shape{
             }
         }
     }
-
-
 }
 
+class EvilCircle extends Shape{
+    constructor(x, y, velX, velY, color, size) {
+        super(x, y, velX, velY);
+        this.color = color;
+        this.size = size;
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.strokeStyle = this.color;
+        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
+
+    checkBounds() {
+        if ((this.x + this.size) >= width) {
+            this.x -= size;
+        }
+
+        if ((this.x - this.size) <= 0) {
+            this.x += size;
+        }
+
+        if ((this.y + this.size) >= height) {
+            this.y -= size;
+        }
+
+        if ((this.y - this.size) <= 0) {
+            this.y = size;
+        }
+    }
+
+    collisionDetect() {
+        for (const ball of balls) {
+            if (ball.exists) {
+                const dx = this.x - ball.x;
+                const dy = this.y - ball.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < this.size + ball.size) {
+                    ball.exists = false;
+                }
+            }
+        }
+    }
+}
 const balls = [];
 
 while (balls.length < 25) {
