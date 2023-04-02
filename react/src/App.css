@@ -290,3 +290,9 @@ body {
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
+
+.gray-box {
+  background: gray;
+  width: 64px;
+  height: 64px;
+}
